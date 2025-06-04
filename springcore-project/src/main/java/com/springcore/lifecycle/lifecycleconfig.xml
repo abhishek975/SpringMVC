@@ -10,6 +10,8 @@
 <bean class="com.springcore.lifecycle.Book"  name="book" init-method="init" destroy-method="destroy">
 <property name="price" value="22" />
 </bean>
-
+<bean class="com.springcore.lifecycle.Pencil"  name="pencil">
+<property name="price" value="50" />
+</bean>
 
 </beans>

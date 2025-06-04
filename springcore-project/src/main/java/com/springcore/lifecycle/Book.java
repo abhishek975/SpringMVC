@@ -19,6 +19,7 @@ public String toString() {
 
 public Book() {
 	super();
+	System.out.println("Here Constructor is called");
 	// TODO Auto-generated constructor stub
 }
 public void init() { //We can customize these method and can also change their names

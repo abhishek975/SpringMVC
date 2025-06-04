@@ -10,6 +10,8 @@ public class Test {
 		 AbstractApplicationContext context= new ClassPathXmlApplicationContext("com/springcore/lifecycle/lifecycleconfig.xml");
 		 Book b=(Book) context.getBean("book");
 		 System.out.println(b.toString());
+		 Pencil p=(Pencil) context.getBean("pencil");
+		 System.out.println(p.toString());
 		 context.registerShutdownHook(); //To see destroy method to run
 	}
 
