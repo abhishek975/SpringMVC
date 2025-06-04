@@ -12,6 +12,7 @@ public class Test {
 		 System.out.println(b.toString());
 		 Pencil p=(Pencil) context.getBean("pencil");
 		 System.out.println(p.toString());
+		 Example e= (Example) context.getBean("example");
 		 context.registerShutdownHook(); //To see destroy method to run
 	}
 

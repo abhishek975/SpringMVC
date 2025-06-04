@@ -7,11 +7,15 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+        <context:annotation-config/>
 <bean class="com.springcore.lifecycle.Book"  name="book" init-method="init" destroy-method="destroy">
 <property name="price" value="22" />
 </bean>
 <bean class="com.springcore.lifecycle.Pencil"  name="pencil">
 <property name="price" value="50" />
+</bean>
+<bean class="com.springcore.lifecycle.Example"  name="example">
+<property name="subject" value="java" />
 </bean>
 
 </beans>
