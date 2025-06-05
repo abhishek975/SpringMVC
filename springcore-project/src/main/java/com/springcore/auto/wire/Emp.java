@@ -16,12 +16,13 @@ public String toString() {
 	return "Emp [address=" + address + "]";
 }
 
-public Emp(Address address) {
+public Emp(Address address) { //Autowiring by constructor checks byType
 	super();
 	this.address = address;
+	System.out.println("Constructor is called");
 }
 
-public Emp() {
+public Emp() {  
 	super();
 	// TODO Auto-generated constructor stub
 }
