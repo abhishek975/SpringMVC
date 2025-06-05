@@ -9,7 +9,7 @@ public class Emp {
 public Address getAddress() {
 	return address;
 }
-@Autowired //Autowire byName
+//@Autowired //Autowire byName
 public void setAddress(Address address) {
 	this.address = address;
 }
@@ -18,7 +18,7 @@ public void setAddress(Address address) {
 public String toString() {
 	return "Emp [address=" + address + "]";
 }
-
+@Autowired
 public Emp(Address address) { //Autowiring by constructor checks byType
 	super();
 	this.address = address;
