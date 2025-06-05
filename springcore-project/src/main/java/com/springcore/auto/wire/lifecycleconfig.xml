@@ -12,7 +12,7 @@
 <property name="street" value="Delhi" />
 <property name="city" value="Delhi" />
 </bean>
-<bean class="com.springcore.auto.wire.Emp" name="employee" autowire="byType">
+<bean class="com.springcore.auto.wire.Emp" name="employee" autowire="byName">
 </bean>
 
 
