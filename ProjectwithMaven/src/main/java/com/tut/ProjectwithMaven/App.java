@@ -28,11 +28,18 @@ public class App
         ad.setStreet("SouthDelhi");
         
         Session session=factory.openSession();
-        session.beginTransaction();
-        session.save(st);
-        session.save(ad);
-        session.getTransaction().commit();
+        
+        Student student=(Student)session.get(Student.class,1); //get method initialize and hit the database on object instantiation itself
+        Address address=(Address)session.get(Address.class,2);
+        
+        Student student2=(Student)session.get(Student.class,1);//By calling same object ,hibernate uses caching concept
+        Student student3=(Student)session.get(Student.class,2);
+//        session.beginTransaction();
+//        session.save(st);
+//        session.save(ad);
+//        session.getTransaction().commit();
         
         session.close();
+        factory.close();
     }
 }
