@@ -29,11 +29,14 @@ public class App
         
         Session session=factory.openSession();
         
-        Student student=(Student)session.get(Student.class,1); //get method initialize and hit the database on object instantiation itself
-        Address address=(Address)session.get(Address.class,2);
+//        Student student=(Student)session.get(Student.class,1); //get method initialize and hit the database on object instantiation itself
+//        Address address=(Address)session.get(Address.class,2);
+//        
+//        Student student2=(Student)session.get(Student.class,1);//By calling same object ,hibernate uses caching concept
+//        Student student3=(Student)session.get(Student.class,2);
         
-        Student student2=(Student)session.get(Student.class,1);//By calling same object ,hibernate uses caching concept
-        Student student3=(Student)session.get(Student.class,2);
+        Student student=(Student)session.load(Student.class,1); //Object won't be called until one of its setter method come in use(Lazy Loading)
+        System.out.println(student.getCity());
 //        session.beginTransaction();
 //        session.save(st);
 //        session.save(ad);
