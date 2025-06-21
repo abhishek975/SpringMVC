@@ -40,6 +40,6 @@ public Answer getAnswer() {
 public void setAnswer(Answer answer) {
 	this.answer = answer;
 }
-@OneToOne(cascade = CascadeType.PERSIST)//Unidirectional
+@OneToOne(cascade = CascadeType.PERSIST) 
 private Answer answer;
 }

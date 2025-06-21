@@ -11,11 +11,7 @@ public class Answer {
 	public String toString() {
 		return "Answer [answerId=" + answerId + ", answer=" + answer + "]";
 	}
-	public Answer(int answerId, String answer) {
-		super();
-		this.answerId = answerId;
-		this.answer = answer;
-	}
+	
 	public Answer() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -33,4 +29,18 @@ public class Answer {
 		this.answer = answer;
 	}
 	private String answer;
+	@OneToOne(mappedBy="answer") //Bi-directional
+	private Question question;
+	public Answer(int answerId, String answer, Question question) {
+		super();
+		this.answerId = answerId;
+		this.answer = answer;
+		this.question = question;
+	}
+	public Question getQuestion() {
+		return question;
+	}
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
 }

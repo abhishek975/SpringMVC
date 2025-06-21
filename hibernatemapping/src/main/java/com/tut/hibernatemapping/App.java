@@ -23,7 +23,7 @@ public class App
     	 Answer a=new Answer();
     	 a.setAnswerId(1);
     	 a.setAnswer("Patty");
-    	 
+    	 a.setQuestion(q1);
     	 q1.setAnswer(a);
     	 
     	 Session session=factory.openSession();
