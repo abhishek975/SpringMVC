@@ -29,7 +29,7 @@ public class Answer {
 		this.answer = answer;
 	}
 	private String answer;
-	@OneToOne(mappedBy="answer") //Bi-directional
+	@OneToOne(mappedBy="answer") //Bi-directional //Answer object is aware about the question object
 	private Question question;
 	public Answer(int answerId, String answer, Question question) {
 		super();
